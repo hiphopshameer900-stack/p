@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story — Chapter 2 Begins...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stage-container" id="mainViewport">
+        <div class="env-layer starfield" id="envStars"></div>
+        <div class="env-layer weather-rain" id="envRain"></div>
+        <div class="env-layer celestial-moon" id="envMoon"></div>
+        <div id="particleEmitterSpace" style="position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:3;"></div>
+
+        <div class="story-card" id="displayCard">
+            <div id="loadingScene" class="scene-view active-view">
+                <div class="glowing-heart">❤️</div>
+                <div class="static-text">Every love story deserves another chance...</div>
+            </div>
+
+            <div id="envelopeScene" class="scene-view">
+                <div class="envelope-wrapper" onclick="openEnvelope()">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-paper">
+                        <p style="font-weight: 600; font-size: 1.2rem; color: #800f2f;">To My Suchi Ma ❤️</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px; color: #590d22;">Click to read</p>
+                    </div>
+                    <div class="envelope-front"></div>
+                </div>
+            </div>
+
+            <div id="textScene" class="scene-view">
+                <div class="animated-text" id="textRenderer"></div>
+                <div class="choice-tray" id="controlsTray">
+                    <button class="interactive-btn btn-yes" onclick="processPathSelection('yes')">YES ❤️</button>
+                    <button class="interactive-btn btn-try" onclick="processPathSelection('try')">🌸 Let's Try Again</button>
+                </div>
+            </div>
+
+            <div id="bookScene" class="scene-view">
+                <div class="book-container">
+                    <div class="book-page">
+                        <div class="photo-placeholder">📸 Photo Placeholder</div>
+                        <div class="photo-caption">Our Favorite Memories ❤️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cinema-floor" id="cinemaFloorLayer">
+            <div class="silhouette boy-actor" id="boyNode"><div class="actor-arm"></div></div>
+            <div class="silhouette girl-actor" id="girlNode"><div class="actor-arm"></div></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
